@@ -13,11 +13,13 @@ The node provides login for both application and delegated permissions. Delegate
 Note that the permissions / account you wish to use already need to be accepted by a global admin, this call is not meant to be used with permissions / account that are not yet verified. This is not part of the login procedure.
 
 ## Other libraries used
-node-fetch is used by the js file. You can install this via ```npm install node-fetch```. This is used to make use of the fetch command in nodejs to  make the POST call to Microsoft's OAuth page.
+node-fetch is needed. You can install it via ```npm install node-fetch@2```. This is used to make use of the fetch command in nodejs to  make the POST call to Microsoft's OAuth page.
 
-While fetch is a normal call in regular javascript, nodejs unfortunately does not support the call and requires you to build it yourself, hence why a 3rd party node was used.
+It's important to note that the "@2" is absolutely necessary, as node-fetch 3+ does not support CommonJS require() importing.
 
-For more information about node-fetch: [https://www.npmjs.com/package/node-fetch](https://www.npmjs.com/package/node-fetch)
+While fetch is a normal call in regular javascript, nodejs unfortunately does not support the call and requires you to install it yourself.
+
+For more information about node-fetch: [https://www.npmjs.com/package/node-fetch](https://www.npmjs.com/package/node-fetch).
 
 ## Update History
 
