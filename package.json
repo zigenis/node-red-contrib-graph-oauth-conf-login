@@ -1,0 +1,24 @@
+{
+  "name": "@zigenis/node-red-contrib-graph-oauth-conf-login",
+  "version": "1.0.0",
+  "author": "Jacob Zigenis",
+  "description": "",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [
+    "node-red",
+    "graph",
+    "microsoft graph"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "node-red": {
+    "nodes": {
+      "node-red-contrib-graph-oauth-conf-login": "node-red-contrib-graph-oauth-conf-login/node-red-contrib-graph-oauth-conf-login.js"
+    }
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
