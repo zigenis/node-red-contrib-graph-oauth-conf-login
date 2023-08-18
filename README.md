@@ -23,10 +23,8 @@ For more information about node-fetch: [https://www.npmjs.com/package/node-fetch
 
 ## Update History
 
-###1.1.3
-- Added Refresh after minutes option to state how long the token stays valid (or set to 0 if unneeded). Check is still done every minute if higher then zero
-- Access token for Application now also goes through the refresh cycle
-- Added the following flow values: graphdelegatedrefreshtokenexpirationdate, graphapplicationrefreshtimer and graphapplicationexpirationdate
+###1.0.0
+Initial release. As noted above, this is an unofficial fork of an NPM package that no longer works for modern versions of Node-RED.
 
 ## Useful links
 
@@ -107,11 +105,11 @@ Clientid, Clientsecret and Tenantid are stored on their actual id, so that it ca
 
 | **Name** | **Value** |
 | --- | --- |
-| graphapplicationaccesstoken | The access_token to be used in your Microsoft Graph calls if you used application login |
-| graphapplicationbearertoken | Bearer + the application access_token is set in this, this is how you are supposed to set the token in your calls |
-| graphapplicationscope | Saves the last used application scope to compare it in the next call to check if the code has changed and therefore a fresh login should be made rather then a refresh |
-| graphapplicationexpirationdate | Expiration date of the delegated refresh token |
-| graphapplicationrefreshtimer | Amount of minutes added to the expiration date when a refresh is done |
+| graph-ApplicationAccessToken | The access_token to be used in your Microsoft Graph calls if you used application login |
+| graph-ApplicationBearerToken | Bearer + the application access_token is set in this, this is how you are supposed to set the token in your calls |
+| graph-ApplicationScope | Saves the last used application scope to compare it in the next call to check if the code has changed and therefore a fresh login should be made rather then a refresh |
+| graph-ApplicationExpirationDate | Expiration date of the delegated refresh token |
+| graph-ApplicationRefreshTimer | Amount of minutes added to the expiration date when a refresh is done |
   
 
 ## On behalf of User Login (Delegated permissions)
@@ -155,14 +153,14 @@ Clientid, Clientsecret and Tenantid are stored on their actual id, so that it ca
 
 | **Name** | **Value** |
 | --- | --- |
-| graphdelegatedaccesstoken | The access_token to be used in your Microsoft Graph calls if you used application login |
-| graphdelegatedbearertoken | Bearer + the application access_token is set in this, this is how you are supposed to set the token in your calls |
-| graphdelegatedrefreshtoken | Contains the refresh token for delegated login |
-| graphdelegatedscope | Saves the last used application scope to compare it in the next call to check if the code has changed and therefore a fresh login should be made rather then a refresh |
-| graphdelegatedredirecturi | Saves the last used redirecturi to compare it in the next call to check if the code has changed and therefore a fresh login should be made rather then a refresh |
-| graphdelegatedcode | Saves the last used code to compare it in the next call to check if the code has changed and therefore a fresh login should be made rather then a refresh |
-| graphdelegatedrefreshtokenexpirationdate | Expiration date of the delegated refresh token |
-| graphdelegatedrefreshtimer | Amount of minutes added to the expiration date when a refresh is done |
+| graph-DelegatedAccessToken | The access_token to be used in your Microsoft Graph calls if you used application login |
+| graph-DelegatedBearerToken | Bearer + the application access_token is set in this, this is how you are supposed to set the token in your calls |
+| graph-DelegatedRefreshToken | Contains the refresh token for delegated login |
+| graph-DelegatedScope | Saves the last used application scope to compare it in the next call to check if the code has changed and therefore a fresh login should be made rather then a refresh |
+| graph-DelegatedRedirectURI | Saves the last used redirecturi to compare it in the next call to check if the code has changed and therefore a fresh login should be made rather then a refresh |
+| graph-DelegatedCode | Saves the last used code to compare it in the next call to check if the code has changed and therefore a fresh login should be made rather then a refresh |
+| graph-DelegatedRefreshTokenExpirationDate | Expiration date of the delegated refresh token |
+| graph-DelegatedRefreshTimer | Amount of minutes added to the expiration date when a refresh is done |
 
 ## Using the node in a flow
 
