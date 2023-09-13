@@ -23,7 +23,7 @@ For more information about node-fetch: [https://www.npmjs.com/package/node-fetch
 
 ## Update History
 
-###1.0.0
+### 1.0.0
 Initial release. As noted above, this is an unofficial fork of an NPM package that no longer works for modern versions of Node-RED.
 
 ## Useful links
